@@ -86,5 +86,19 @@ cp dist/* $APP_DIR/ROOT
         input(message: 'Deploy?', ok: 'Go!!')
       }
     }
+    stage('Deploy') {
+      agent any
+      steps {
+        unstash 'client'
+        unstash 'server'
+        sh '''#Deploy teh exact artifacts to production
+echo "Deploying client:"
+ls -alFh dist
+echo "Deploying server:"
+ls -alFh target
+'''
+        echo 'Success!!!!'
+      }
+    }
   }
 }
