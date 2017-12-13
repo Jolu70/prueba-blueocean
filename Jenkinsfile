@@ -81,7 +81,8 @@ rm -rf $APP_DIR/ROOT
 cp target/server.war $APP_DIR/server.war
 mkdir -p $APP_DIR/ROOT
 cp dist/* $APP_DIR/ROOT
-/usr/local/tomcat/bin/startup.sh'''
+/usr/local/tomcat/bin/startup.sh
+'''
       }
     }
   }
