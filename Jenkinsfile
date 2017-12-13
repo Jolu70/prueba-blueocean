@@ -83,6 +83,7 @@ mkdir -p $APP_DIR/ROOT
 cp dist/* $APP_DIR/ROOT
 /usr/local/tomcat/bin/startup.sh
 '''
+        input(message: 'Deploy?', ok: 'Go!!')
       }
     }
   }
